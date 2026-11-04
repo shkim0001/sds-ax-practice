@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "a17105f6-241c-41d1-9b2f-13797688123a",
+  "status": "current",
+  "command": "deliver",
+  "type": "workflow",
+  "input": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\workflow-manual-react-20261104-144455\\candidate.json",
+  "output": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\workflow-manual-react-20261104-144455\\manual-react.html",
+  "specification": {
+    "sha256": "068b5242fef4741621f45ce28056c53f147059fc60b8f17110a5da426921cc49",
+    "bytes": 3843
+  },
+  "artifact": {
+    "sha256": "d5c5e0dfb6f60b40d659662c7ffece0fdcf8a641f19ba12bb800bb8bca5bae0b",
+    "bytes": 848534
+  }
+}

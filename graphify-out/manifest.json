@@ -1,0 +1,704 @@
+{
+  "day1_practice/check_credentials.py": {
+    "mtime": 1793582037.9807196,
+    "seen": 1793772080.0452347,
+    "ast_hash": "4b53673667da6a6644a3125c351860e1",
+    "semantic_hash": "4b53673667da6a6644a3125c351860e1"
+  },
+  "day1_practice/check_env.py": {
+    "mtime": 1793581355.315513,
+    "seen": 1793772080.0452406,
+    "ast_hash": "4222ed836a3a5b41d32dda880378888f",
+    "semantic_hash": "4222ed836a3a5b41d32dda880378888f"
+  },
+  "day1_practice/components.py": {
+    "mtime": 1793593279.149989,
+    "seen": 1793772080.0452428,
+    "ast_hash": "b23905012cf6d18847da12a65e5ec947",
+    "semantic_hash": "b23905012cf6d18847da12a65e5ec947"
+  },
+  "day1_practice/first_call_raw.py": {
+    "mtime": 1793585032.2994194,
+    "seen": 1793772080.045244,
+    "ast_hash": "4fb9c219532fbf78298e7053556b27cd",
+    "semantic_hash": "4fb9c219532fbf78298e7053556b27cd"
+  },
+  "day1_practice/inquiry_chain.py": {
+    "mtime": 1793596212.4120657,
+    "seen": 1793772080.045245,
+    "ast_hash": "dc32ae9970301e91591270a6a608665f",
+    "semantic_hash": "dc32ae9970301e91591270a6a608665f"
+  },
+  "day1_practice/lcel_basic.py": {
+    "mtime": 1793594899.9138737,
+    "seen": 1793772080.0452456,
+    "ast_hash": "6dad44e27c9a2117106b2dc502916848",
+    "semantic_hash": "6dad44e27c9a2117106b2dc502916848"
+  },
+  "day1_practice/lcel_debug.py": {
+    "mtime": 1793596019.336544,
+    "seen": 1793772080.0452466,
+    "ast_hash": "6ad7107c08c44806e4208f9ffe1a5373",
+    "semantic_hash": "6ad7107c08c44806e4208f9ffe1a5373"
+  },
+  "day1_practice/limits.py": {
+    "mtime": 1793586691.219165,
+    "seen": 1793772080.0452476,
+    "ast_hash": "3aed2dd4ef85dfbcee7c918d1feaa237",
+    "semantic_hash": "3aed2dd4ef85dfbcee7c918d1feaa237"
+  },
+  "day1_practice/messages_role.py": {
+    "mtime": 1793585624.3609653,
+    "seen": 1793772080.0452483,
+    "ast_hash": "e4d15b19a797ba3f4d30072d873df672",
+    "semantic_hash": "e4d15b19a797ba3f4d30072d873df672"
+  },
+  "day1_practice/multiturn_manual.py": {
+    "mtime": 1793601138.206476,
+    "seen": 1793772080.045249,
+    "ast_hash": "c38f53406f08ea0493693eafd7365e5a",
+    "semantic_hash": "c38f53406f08ea0493693eafd7365e5a"
+  },
+  "day1_practice/params.py": {
+    "mtime": 1793586103.3674092,
+    "seen": 1793772080.0452497,
+    "ast_hash": "9f000b38b46f3673351923b5ccf4f267",
+    "semantic_hash": "9f000b38b46f3673351923b5ccf4f267"
+  },
+  "day1_practice/structured_output.py": {
+    "mtime": 1793594220.830199,
+    "seen": 1793772080.0452507,
+    "ast_hash": "9bf09cec8da97f406068418bd4559fb8",
+    "semantic_hash": "9bf09cec8da97f406068418bd4559fb8"
+  },
+  "day1_practice/tokens.py": {
+    "mtime": 1793585309.4334264,
+    "seen": 1793772080.0452514,
+    "ast_hash": "209676205dc16237066b067a59f9f5a1",
+    "semantic_hash": "209676205dc16237066b067a59f9f5a1"
+  },
+  "day1_practice/tool_decision.py": {
+    "mtime": 1793600514.3395324,
+    "seen": 1793772080.045252,
+    "ast_hash": "c2d1742ba00d3009a06906f475a8c23e",
+    "semantic_hash": "c2d1742ba00d3009a06906f475a8c23e"
+  },
+  "day1_practice/travel_tool.py": {
+    "mtime": 1793600267.483271,
+    "seen": 1793772080.0452528,
+    "ast_hash": "5607104583785e616a1cb7c862e75066",
+    "semantic_hash": "5607104583785e616a1cb7c862e75066"
+  },
+  "day1_practice/why_langchain.py": {
+    "mtime": 1793587240.2187808,
+    "seen": 1793772080.0452535,
+    "ast_hash": "851bf8073d9c649676a27373914bfa56",
+    "semantic_hash": "851bf8073d9c649676a27373914bfa56"
+  },
+  "day2_practice/chunking.py": {
+    "mtime": 1793669762.0573766,
+    "seen": 1793772080.0452545,
+    "ast_hash": "78d82612748b44d5319426259d722e6d",
+    "semantic_hash": "78d82612748b44d5319426259d722e6d"
+  },
+  "day2_practice/chunking_md.py": {
+    "mtime": 1793670159.0374756,
+    "seen": 1793772080.0452552,
+    "ast_hash": "29f619ec7567be4d6350458b1fd75b46",
+    "semantic_hash": "29f619ec7567be4d6350458b1fd75b46"
+  },
+  "day2_practice/embedding.py": {
+    "mtime": 1793672741.8797686,
+    "seen": 1793772080.0452557,
+    "ast_hash": "4ed97762ce9a5e28ea1f8d9e78a93c36",
+    "semantic_hash": "4ed97762ce9a5e28ea1f8d9e78a93c36"
+  },
+  "day2_practice/failures.py": {
+    "mtime": 1793686187.7754385,
+    "seen": 1793772080.0452566,
+    "ast_hash": "db2f5e7bdcfd82625999af37f52a10d9",
+    "semantic_hash": "db2f5e7bdcfd82625999af37f52a10d9"
+  },
+  "day2_practice/hallucination.py": {
+    "mtime": 1793663829.358766,
+    "seen": 1793772080.0452576,
+    "ast_hash": "147ff5ff4466223e5193ba0509590e8b",
+    "semantic_hash": "147ff5ff4466223e5193ba0509590e8b"
+  },
+  "day2_practice/hybrid.py": {
+    "mtime": 1793686713.4590297,
+    "seen": 1793772080.0452583,
+    "ast_hash": "3e0f678a5306c6d988e00082e0fa4e67",
+    "semantic_hash": "3e0f678a5306c6d988e00082e0fa4e67"
+  },
+  "day2_practice/load_db.py": {
+    "mtime": 1793682476.0711918,
+    "seen": 1793772080.0452592,
+    "ast_hash": "16c4d9b9c6f2be97db08e556e5ab819f",
+    "semantic_hash": "16c4d9b9c6f2be97db08e556e5ab819f"
+  },
+  "day2_practice/loaders.py": {
+    "mtime": 1793668412.4775167,
+    "seen": 1793772080.04526,
+    "ast_hash": "129300da52c39b145aeeae5b33326579",
+    "semantic_hash": "129300da52c39b145aeeae5b33326579"
+  },
+  "day2_practice/metadata.py": {
+    "mtime": 1793671633.1136773,
+    "seen": 1793772080.045261,
+    "ast_hash": "95a2e8427c6bd202269e1b8f8d2dde0c",
+    "semantic_hash": "95a2e8427c6bd202269e1b8f8d2dde0c"
+  },
+  "day2_practice/rag_chain.py": {
+    "mtime": 1793685768.766887,
+    "seen": 1793772080.0452616,
+    "ast_hash": "f761e1b032d60e5976fa1c6942fa51eb",
+    "semantic_hash": "f761e1b032d60e5976fa1c6942fa51eb"
+  },
+  "day2_practice/rerank_demo.py": {
+    "mtime": 1793688706.1868541,
+    "seen": 1793772080.0452623,
+    "ast_hash": "51324a18cb6844f2ee248a28dabbfc92",
+    "semantic_hash": "51324a18cb6844f2ee248a28dabbfc92"
+  },
+  "day2_practice/retriever.py": {
+    "mtime": 1793682991.0865495,
+    "seen": 1793772080.045263,
+    "ast_hash": "5da3c144c1aeae64aa8dd5bd744fe9fa",
+    "semantic_hash": "5da3c144c1aeae64aa8dd5bd744fe9fa"
+  },
+  "day2_practice/similarity.py": {
+    "mtime": 1793673030.9216657,
+    "seen": 1793772080.0452642,
+    "ast_hash": "e9434c80cca3e6dec70e5d44b37618b9",
+    "semantic_hash": "e9434c80cca3e6dec70e5d44b37618b9"
+  },
+  "day2_practice/vectorstore.py": {
+    "mtime": 1793675018.4908688,
+    "seen": 1793772080.0452652,
+    "ast_hash": "f7f7345c4d29aa25f1911873a2ed9344",
+    "semantic_hash": "f7f7345c4d29aa25f1911873a2ed9344"
+  },
+  "day2_practice/verify.py": {
+    "mtime": 1793685852.254587,
+    "seen": 1793772080.045266,
+    "ast_hash": "5688a371bce8fe2aa047acdc04b0e69a",
+    "semantic_hash": "5688a371bce8fe2aa047acdc04b0e69a"
+  },
+  "day2_practice/verify_sources.py": {
+    "mtime": 1793686030.3790798,
+    "seen": 1793772080.0452666,
+    "ast_hash": "f0e6c966556352eb547ea34752a57d90",
+    "semantic_hash": "f0e6c966556352eb547ea34752a57d90"
+  },
+  "day3_practice/chain_limit.py": {
+    "mtime": 1793752968.0268772,
+    "seen": 1793772080.0452673,
+    "ast_hash": "01b669ea13ed8cd151b4c3ac59815048",
+    "semantic_hash": "01b669ea13ed8cd151b4c3ac59815048"
+  },
+  "day3_practice/conditional.py": {
+    "mtime": 1793758494.221297,
+    "seen": 1793772080.0452683,
+    "ast_hash": "5ee68586c93f521eefb84b1bb4fb1c54",
+    "semantic_hash": "5ee68586c93f521eefb84b1bb4fb1c54"
+  },
+  "day3_practice/cycle.py": {
+    "mtime": 1793760439.3218415,
+    "seen": 1793772080.045269,
+    "ast_hash": "05b1f302e0b303425da6cb2ffd1d3e20",
+    "semantic_hash": "05b1f302e0b303425da6cb2ffd1d3e20"
+  },
+  "day3_practice/hello_graph.py": {
+    "mtime": 1793756406.5071676,
+    "seen": 1793772080.0452697,
+    "ast_hash": "44e65aebdc3b9a8b9977af1e406a19f7",
+    "semantic_hash": "44e65aebdc3b9a8b9977af1e406a19f7"
+  },
+  "day3_practice/manual_react.py": {
+    "mtime": 1793768024.4056115,
+    "seen": 1793772080.0452704,
+    "ast_hash": "1e6e16b2101530339d63c85975b10f23",
+    "semantic_hash": "1e6e16b2101530339d63c85975b10f23"
+  },
+  "day3_practice/reducer.py": {
+    "mtime": 1793758005.3235784,
+    "seen": 1793772080.0452714,
+    "ast_hash": "bab5952e4ea811373ce6a7efe35ee3a3",
+    "semantic_hash": "bab5952e4ea811373ce6a7efe35ee3a3"
+  },
+  "day3_practice/state_schema.py": {
+    "mtime": 1793756075.3468652,
+    "seen": 1793772080.045272,
+    "ast_hash": "db8c9c23a32812bdef779b3679f16d6e",
+    "semantic_hash": "db8c9c23a32812bdef779b3679f16d6e"
+  },
+  "multiturn_history.py": {
+    "mtime": 1793601978.2818074,
+    "seen": 1793772080.0452728,
+    "ast_hash": "6308221f0e0e2cd8e41b33862d67065f",
+    "semantic_hash": "6308221f0e0e2cd8e41b33862d67065f"
+  },
+  "sds-ax-training/.github/workflows/grade.yml": {
+    "mtime": 1793604397.6088605,
+    "seen": 1793772080.0452735,
+    "ast_hash": "6a2f43cdba2cefa854e91208daec3730",
+    "semantic_hash": "6a2f43cdba2cefa854e91208daec3730"
+  },
+  "sds-ax-training/conftest.py": {
+    "mtime": 1793604397.6088605,
+    "seen": 1793772080.0452743,
+    "ast_hash": "5877428805e2ced3ee8b033a194f5a66",
+    "semantic_hash": "5877428805e2ced3ee8b033a194f5a66"
+  },
+  "sds-ax-training/day01/practice/starter/submission.py": {
+    "mtime": 1793605162.2594104,
+    "seen": 1793772080.045275,
+    "ast_hash": "2651e8468b4060b35fdef261a0943f77",
+    "semantic_hash": "2651e8468b4060b35fdef261a0943f77"
+  },
+  "sds-ax-training/day01/tests/test_submission.py": {
+    "mtime": 1793604397.6088605,
+    "seen": 1793772080.0452762,
+    "ast_hash": "c066ab4927e81c0da8462d70544caffd",
+    "semantic_hash": "c066ab4927e81c0da8462d70544caffd"
+  },
+  "sds-ax-training/day02/practice/starter/submission.py": {
+    "mtime": 1793690246.1105795,
+    "seen": 1793772080.0452766,
+    "ast_hash": "d02d608fea8b4a1017838999588fe8f0",
+    "semantic_hash": "d02d608fea8b4a1017838999588fe8f0"
+  },
+  "sds-ax-training/day02/tests/test_submission.py": {
+    "mtime": 1793604397.6088605,
+    "seen": 1793772080.0452776,
+    "ast_hash": "d8d847a1507179b81cf7c7bb5fede646",
+    "semantic_hash": "d8d847a1507179b81cf7c7bb5fede646"
+  },
+  "sds-ax-training/day03/practice/data/ops_fixtures.json": {
+    "mtime": 1793604397.6088605,
+    "seen": 1793772080.0452785,
+    "ast_hash": "8c1ab66d091107d2049a88ecc95b0f9b",
+    "semantic_hash": "8c1ab66d091107d2049a88ecc95b0f9b"
+  },
+  "sds-ax-training/day03/practice/starter/submission.py": {
+    "mtime": 1793604397.6088605,
+    "seen": 1793772080.0452793,
+    "ast_hash": "ea49950fcc5b218b1ab4a64fa755a7ca",
+    "semantic_hash": "ea49950fcc5b218b1ab4a64fa755a7ca"
+  },
+  "sds-ax-training/day03/tests/test_submission.py": {
+    "mtime": 1793604397.6088605,
+    "seen": 1793772080.04528,
+    "ast_hash": "92326c16b2de1a61d69daa01bdcc3037",
+    "semantic_hash": "92326c16b2de1a61d69daa01bdcc3037"
+  },
+  "sds-ax-training/day04/mcp_server.py": {
+    "mtime": 1793604397.6245606,
+    "seen": 1793772080.0452807,
+    "ast_hash": "5673a07a9c6e360deb9262fa31e2ec81",
+    "semantic_hash": "5673a07a9c6e360deb9262fa31e2ec81"
+  },
+  "sds-ax-training/day04/practice/data/ops_assets.json": {
+    "mtime": 1793604397.6245606,
+    "seen": 1793772080.0452816,
+    "ast_hash": "4e85a7de0ed526257b3d60b8640a7379",
+    "semantic_hash": "4e85a7de0ed526257b3d60b8640a7379"
+  },
+  "sds-ax-training/day04/practice/starter/submission.py": {
+    "mtime": 1793604397.6245606,
+    "seen": 1793772080.0452824,
+    "ast_hash": "766df61a16bd1faf2af5ae31a76d327a",
+    "semantic_hash": "766df61a16bd1faf2af5ae31a76d327a"
+  },
+  "sds-ax-training/day04/tests/test_submission.py": {
+    "mtime": 1793604397.6245606,
+    "seen": 1793772080.045283,
+    "ast_hash": "995328da30c85feb5a527b9fa6955758",
+    "semantic_hash": "995328da30c85feb5a527b9fa6955758"
+  },
+  "sds-ax-training/day05/practice/data/attack_set.json": {
+    "mtime": 1793604397.6245606,
+    "seen": 1793772080.0452838,
+    "ast_hash": "558bb80b182ea26eabebb20116982e23",
+    "semantic_hash": "558bb80b182ea26eabebb20116982e23"
+  },
+  "sds-ax-training/day05/practice/data/normal_set.json": {
+    "mtime": 1793604397.6245606,
+    "seen": 1793772080.0452845,
+    "ast_hash": "2e712cb711e76477e046da14948300c4",
+    "semantic_hash": "2e712cb711e76477e046da14948300c4"
+  },
+  "sds-ax-training/day05/practice/starter/submission.py": {
+    "mtime": 1793604397.6245606,
+    "seen": 1793772080.0452855,
+    "ast_hash": "d3a1f1dd0d1086020c529bae96757166",
+    "semantic_hash": "d3a1f1dd0d1086020c529bae96757166"
+  },
+  "sds-ax-training/day05/tests/test_submission.py": {
+    "mtime": 1793604397.6245606,
+    "seen": 1793772080.0452862,
+    "ast_hash": "0e414e088a57bdaf50533db781524cb2",
+    "semantic_hash": "0e414e088a57bdaf50533db781524cb2"
+  },
+  "sds-ax-training/day06/practice/starter/submission.py": {
+    "mtime": 1793604397.6245606,
+    "seen": 1793772080.045287,
+    "ast_hash": "d053b4e46247b866d36d0b3c45dc0fe4",
+    "semantic_hash": "d053b4e46247b866d36d0b3c45dc0fe4"
+  },
+  "sds-ax-training/day06/routing_test.json": {
+    "mtime": 1793604397.6245606,
+    "seen": 1793772080.0452874,
+    "ast_hash": "d094b96994c17151a666132258bcd193",
+    "semantic_hash": "d094b96994c17151a666132258bcd193"
+  },
+  "sds-ax-training/day06/tests/test_submission.py": {
+    "mtime": 1793604397.6245606,
+    "seen": 1793772080.045288,
+    "ast_hash": "64e8f26003c007198caa0600c3814f04",
+    "semantic_hash": "64e8f26003c007198caa0600c3814f04"
+  },
+  "sds-ax-training/day07/practice/starter/submission.py": {
+    "mtime": 1793604397.6245606,
+    "seen": 1793772080.045289,
+    "ast_hash": "a97a6642085af750d4f7e28a9bfd4cf8",
+    "semantic_hash": "a97a6642085af750d4f7e28a9bfd4cf8"
+  },
+  "sds-ax-training/day07/tests/test_submission.py": {
+    "mtime": 1793604397.6245606,
+    "seen": 1793772080.0452898,
+    "ast_hash": "e66de07b545017c8e66bb5c1ea088af0",
+    "semantic_hash": "e66de07b545017c8e66bb5c1ea088af0"
+  },
+  "sds-ax-training/day08/practice/starter/submission.py": {
+    "mtime": 1793604397.6245606,
+    "seen": 1793772080.0452905,
+    "ast_hash": "2fa52dc96711b17f307d65bd50806292",
+    "semantic_hash": "2fa52dc96711b17f307d65bd50806292"
+  },
+  "sds-ax-training/day08/tests/test_submission.py": {
+    "mtime": 1793604397.6245606,
+    "seen": 1793772080.0452912,
+    "ast_hash": "b6875a1be4edc685dad788a30077841d",
+    "semantic_hash": "b6875a1be4edc685dad788a30077841d"
+  },
+  "sds-ax-training/day09/practice/starter/submission.py": {
+    "mtime": 1793604397.6245606,
+    "seen": 1793772080.0452921,
+    "ast_hash": "38781b454db565d2cd8f49b2c32ac493",
+    "semantic_hash": "38781b454db565d2cd8f49b2c32ac493"
+  },
+  "sds-ax-training/day09/tests/test_submission.py": {
+    "mtime": 1793604397.6245606,
+    "seen": 1793772080.0452929,
+    "ast_hash": "ee5eba2eef5ec20fe93a6b9ce34d48a7",
+    "semantic_hash": "ee5eba2eef5ec20fe93a6b9ce34d48a7"
+  },
+  "sds-ax-training/day10/practice/starter/submission.py": {
+    "mtime": 1793604397.6403608,
+    "seen": 1793772080.0452936,
+    "ast_hash": "d7a19a29d52cdcda19fbc650101a00e7",
+    "semantic_hash": "d7a19a29d52cdcda19fbc650101a00e7"
+  },
+  "sds-ax-training/day10/tests/test_submission.py": {
+    "mtime": 1793604397.6403608,
+    "seen": 1793772080.0452943,
+    "ast_hash": "33ab05aabc1861c59fe6b79ad5ef407b",
+    "semantic_hash": "33ab05aabc1861c59fe6b79ad5ef407b"
+  },
+  "sds-ax-training/eval_set.json": {
+    "mtime": 1793690660.8838315,
+    "seen": 1793772080.045295,
+    "ast_hash": "7bf6cb1e66f9f780c6b8ea86a2703e4f",
+    "semantic_hash": "7bf6cb1e66f9f780c6b8ea86a2703e4f"
+  },
+  "sds-ax-training/grading/day01.json": {
+    "mtime": 1793604397.6433656,
+    "seen": 1793772080.045296,
+    "ast_hash": "47821ad36500eabb1be4be8430dd4c4b",
+    "semantic_hash": "47821ad36500eabb1be4be8430dd4c4b"
+  },
+  "sds-ax-training/grading/day02.json": {
+    "mtime": 1793604397.6433656,
+    "seen": 1793772080.0452967,
+    "ast_hash": "796b6363d4837ac754bd5c9c76b07364",
+    "semantic_hash": "796b6363d4837ac754bd5c9c76b07364"
+  },
+  "sds-ax-training/grading/day03.json": {
+    "mtime": 1793604397.6433656,
+    "seen": 1793772080.0452974,
+    "ast_hash": "b6059b2cce7b2c8de84137273020f81f",
+    "semantic_hash": "b6059b2cce7b2c8de84137273020f81f"
+  },
+  "sds-ax-training/grading/day04.json": {
+    "mtime": 1793604397.6433656,
+    "seen": 1793772080.045298,
+    "ast_hash": "ee6d6298eb357928a426ca7f395793e7",
+    "semantic_hash": "ee6d6298eb357928a426ca7f395793e7"
+  },
+  "sds-ax-training/grading/day05.json": {
+    "mtime": 1793604397.6433656,
+    "seen": 1793772080.045299,
+    "ast_hash": "fb5837d8e19ea89c79cf8144c694995f",
+    "semantic_hash": "fb5837d8e19ea89c79cf8144c694995f"
+  },
+  "sds-ax-training/grading/day06.json": {
+    "mtime": 1793604397.6433656,
+    "seen": 1793772080.0452998,
+    "ast_hash": "0b87179b19b2a09ad0f04aaf90e725f4",
+    "semantic_hash": "0b87179b19b2a09ad0f04aaf90e725f4"
+  },
+  "sds-ax-training/grading/day07.json": {
+    "mtime": 1793604397.6433656,
+    "seen": 1793772080.0453005,
+    "ast_hash": "84f09d2443f74df585a297c40b72e92e",
+    "semantic_hash": "84f09d2443f74df585a297c40b72e92e"
+  },
+  "sds-ax-training/grading/day08.json": {
+    "mtime": 1793604397.6433656,
+    "seen": 1793772080.0453012,
+    "ast_hash": "763f810c8aaec25d2285293063aaf73a",
+    "semantic_hash": "763f810c8aaec25d2285293063aaf73a"
+  },
+  "sds-ax-training/grading/day09.json": {
+    "mtime": 1793604397.6433656,
+    "seen": 1793772080.045302,
+    "ast_hash": "5be5aca1e88e9ab8c12beb8d455f69d3",
+    "semantic_hash": "5be5aca1e88e9ab8c12beb8d455f69d3"
+  },
+  "sds-ax-training/grading/day10.json": {
+    "mtime": 1793604397.6433656,
+    "seen": 1793772080.0453029,
+    "ast_hash": "425a197d7c56b2b3f5f5eb6605d4f4f9",
+    "semantic_hash": "425a197d7c56b2b3f5f5eb6605d4f4f9"
+  },
+  "sds-ax-training/pyproject.toml": {
+    "mtime": 1793604397.6433656,
+    "seen": 1793772080.0453036,
+    "ast_hash": "b0826250e5bd6cce9c08d0cf144611ef",
+    "semantic_hash": "b0826250e5bd6cce9c08d0cf144611ef"
+  },
+  "sds-ax-training/scripts/grade.py": {
+    "mtime": 1793604397.6433656,
+    "seen": 1793772080.0453043,
+    "ast_hash": "d55ebd96d8e0d5e62bff876a34703df5",
+    "semantic_hash": "d55ebd96d8e0d5e62bff876a34703df5"
+  },
+  "sds-ax-training/sds_testkit.py": {
+    "mtime": 1793604397.6433656,
+    "seen": 1793772080.045305,
+    "ast_hash": "f17792b04143c369cd67c3ec021560f8",
+    "semantic_hash": "f17792b04143c369cd67c3ec021560f8"
+  },
+  "day2_practice/docs/leave_policy.md": {
+    "mtime": 1793668289.2199454,
+    "seen": 1793772080.045306,
+    "ast_hash": "7cad2f087398fb0864c7d7a54d70b241",
+    "semantic_hash": "7cad2f087398fb0864c7d7a54d70b241"
+  },
+  "day2_practice/docs/remote_work_policy.md": {
+    "mtime": 1793668354.4099305,
+    "seen": 1793772080.0453067,
+    "ast_hash": "b8bc22beb36851e3424aa191694c11b8",
+    "semantic_hash": "b8bc22beb36851e3424aa191694c11b8"
+  },
+  "day2_practice/docs/travel_policy.md": {
+    "mtime": 1793668375.4055696,
+    "seen": 1793772080.0453072,
+    "ast_hash": "36ad087ffd1732ae58c25a52653abdce",
+    "semantic_hash": "36ad087ffd1732ae58c25a52653abdce"
+  },
+  "requirements.txt": {
+    "mtime": 1793579208.2109528,
+    "seen": 1793772080.0453079,
+    "ast_hash": "4cba060672cf9f206392c28eec2b5c52",
+    "semantic_hash": "4cba060672cf9f206392c28eec2b5c52"
+  },
+  "sds-ax-training/AGENTS.md": {
+    "mtime": 1793604397.6088605,
+    "seen": 1793772080.045309,
+    "ast_hash": "a8593c099942e58329d49c439373452d",
+    "semantic_hash": "a8593c099942e58329d49c439373452d"
+  },
+  "sds-ax-training/README.md": {
+    "mtime": 1793604397.6088605,
+    "seen": 1793772080.0453103,
+    "ast_hash": "2c260308568af99dee9452ea68e07cd5",
+    "semantic_hash": "2c260308568af99dee9452ea68e07cd5"
+  },
+  "sds-ax-training/day01/README.md": {
+    "mtime": 1793604397.6088605,
+    "seen": 1793772080.045311,
+    "ast_hash": "c631e837e88ac0ee3593a6b3dec1dd29",
+    "semantic_hash": "c631e837e88ac0ee3593a6b3dec1dd29"
+  },
+  "sds-ax-training/day01/lecture/README.md": {
+    "mtime": 1793604397.6088605,
+    "seen": 1793772080.0453115,
+    "ast_hash": "81aa6df577b0aff55cf0e02a5d35ed83",
+    "semantic_hash": "81aa6df577b0aff55cf0e02a5d35ed83"
+  },
+  "sds-ax-training/day02/README.md": {
+    "mtime": 1793604397.6088605,
+    "seen": 1793772080.0453122,
+    "ast_hash": "312ac0e2b4fcdc45fa825ba9f3583887",
+    "semantic_hash": "312ac0e2b4fcdc45fa825ba9f3583887"
+  },
+  "sds-ax-training/day02/practice/docs/incident_runbook.md": {
+    "mtime": 1793604397.6088605,
+    "seen": 1793772080.0453131,
+    "ast_hash": "20600e89894247e126bba27369ab0d52",
+    "semantic_hash": "20600e89894247e126bba27369ab0d52"
+  },
+  "sds-ax-training/day02/practice/docs/leave_policy.md": {
+    "mtime": 1793604397.6088605,
+    "seen": 1793772080.0453138,
+    "ast_hash": "1e2c3986ed88f6f00cacde44be44612f",
+    "semantic_hash": "1e2c3986ed88f6f00cacde44be44612f"
+  },
+  "sds-ax-training/day02/practice/docs/oncall_policy.md": {
+    "mtime": 1793604397.6088605,
+    "seen": 1793772080.0453146,
+    "ast_hash": "1585ff498971ef0cd0cc2f20d47173a4",
+    "semantic_hash": "1585ff498971ef0cd0cc2f20d47173a4"
+  },
+  "sds-ax-training/day03/README.md": {
+    "mtime": 1793604397.6088605,
+    "seen": 1793772080.0453153,
+    "ast_hash": "e65c6b884e5091d274ec417d4abefec7",
+    "semantic_hash": "e65c6b884e5091d274ec417d4abefec7"
+  },
+  "sds-ax-training/day03/lecture/README.md": {
+    "mtime": 1793604397.6088605,
+    "seen": 1793772080.045316,
+    "ast_hash": "659b2ae559276bfd71bd055b3ccff099",
+    "semantic_hash": "659b2ae559276bfd71bd055b3ccff099"
+  },
+  "sds-ax-training/day04/README.md": {
+    "mtime": 1793604397.6088605,
+    "seen": 1793772080.0453167,
+    "ast_hash": "fe752df20c84c789e597c74507d47b09",
+    "semantic_hash": "fe752df20c84c789e597c74507d47b09"
+  },
+  "sds-ax-training/day04/lecture/README.md": {
+    "mtime": 1793604397.6245606,
+    "seen": 1793772080.0453174,
+    "ast_hash": "79d0d9922a476962382dcc9091da8de7",
+    "semantic_hash": "79d0d9922a476962382dcc9091da8de7"
+  },
+  "sds-ax-training/day05/README.md": {
+    "mtime": 1793604397.6245606,
+    "seen": 1793772080.0453181,
+    "ast_hash": "680679471e85362d0f6bdc1b4f34f710",
+    "semantic_hash": "680679471e85362d0f6bdc1b4f34f710"
+  },
+  "sds-ax-training/day05/lecture/README.md": {
+    "mtime": 1793604397.6245606,
+    "seen": 1793772080.0453188,
+    "ast_hash": "f3221f0874b2df170d60aa529b7a5a5e",
+    "semantic_hash": "f3221f0874b2df170d60aa529b7a5a5e"
+  },
+  "sds-ax-training/day06/README.md": {
+    "mtime": 1793604397.6245606,
+    "seen": 1793772080.0453198,
+    "ast_hash": "0a828714c9a8d8107d0902628ec3c865",
+    "semantic_hash": "0a828714c9a8d8107d0902628ec3c865"
+  },
+  "sds-ax-training/day06/lecture/README.md": {
+    "mtime": 1793604397.6245606,
+    "seen": 1793772080.0453203,
+    "ast_hash": "49c904dc900861eeaa65436396c72f38",
+    "semantic_hash": "49c904dc900861eeaa65436396c72f38"
+  },
+  "sds-ax-training/day07/README.md": {
+    "mtime": 1793604397.6245606,
+    "seen": 1793772080.045321,
+    "ast_hash": "67f2d6fa4f2260500a96ac976bf5d05e",
+    "semantic_hash": "67f2d6fa4f2260500a96ac976bf5d05e"
+  },
+  "sds-ax-training/day07/growth.md": {
+    "mtime": 1793604397.6245606,
+    "seen": 1793772080.0453217,
+    "ast_hash": "ed55921b5d6a0b3b46211662de6557c9",
+    "semantic_hash": "ed55921b5d6a0b3b46211662de6557c9"
+  },
+  "sds-ax-training/day07/lecture/README.md": {
+    "mtime": 1793604397.6245606,
+    "seen": 1793772080.0453224,
+    "ast_hash": "ba9a7657b5b35a3c19d085587fa828fe",
+    "semantic_hash": "ba9a7657b5b35a3c19d085587fa828fe"
+  },
+  "sds-ax-training/day08/README.md": {
+    "mtime": 1793604397.6245606,
+    "seen": 1793772080.0453236,
+    "ast_hash": "8e8f866fa4ad970215c99a69726093a7",
+    "semantic_hash": "8e8f866fa4ad970215c99a69726093a7"
+  },
+  "sds-ax-training/day08/lecture/README.md": {
+    "mtime": 1793604397.6245606,
+    "seen": 1793772080.045324,
+    "ast_hash": "da64e78dd56d828d9ed4d4dac7f155ab",
+    "semantic_hash": "da64e78dd56d828d9ed4d4dac7f155ab"
+  },
+  "sds-ax-training/day09/README.md": {
+    "mtime": 1793604397.6245606,
+    "seen": 1793772080.0453248,
+    "ast_hash": "b22ba3bf2516d0b51dd14062ab2a8973",
+    "semantic_hash": "b22ba3bf2516d0b51dd14062ab2a8973"
+  },
+  "sds-ax-training/day09/lecture/README.md": {
+    "mtime": 1793604397.6245606,
+    "seen": 1793772080.0453255,
+    "ast_hash": "e6c5864d0fb2b7f51e0f526f61a880c9",
+    "semantic_hash": "e6c5864d0fb2b7f51e0f526f61a880c9"
+  },
+  "sds-ax-training/day10/README.md": {
+    "mtime": 1793604397.6245606,
+    "seen": 1793772080.0453262,
+    "ast_hash": "733620339a74dc0a119e665fbb98ee99",
+    "semantic_hash": "733620339a74dc0a119e665fbb98ee99"
+  },
+  "sds-ax-training/day10/lecture/README.md": {
+    "mtime": 1793604397.6245606,
+    "seen": 1793772080.0453272,
+    "ast_hash": "c8b7727791b3e94ccb27ee84905228bd",
+    "semantic_hash": "c8b7727791b3e94ccb27ee84905228bd"
+  },
+  "sds-ax-training/docs/STUDENT_GUIDE.md": {
+    "mtime": 1793604397.6403608,
+    "seen": 1793772080.045328,
+    "ast_hash": "dff6be0e7f5ea95e238ee342ee280f71",
+    "semantic_hash": "dff6be0e7f5ea95e238ee342ee280f71"
+  },
+  "sds-ax-training/requirements.txt": {
+    "mtime": 1793604397.6433656,
+    "seen": 1793772080.0453284,
+    "ast_hash": "e282a0dc554de5126d236f22fbfe54d1",
+    "semantic_hash": "e282a0dc554de5126d236f22fbfe54d1"
+  },
+  "hello_conditionnal_graph.png": {
+    "mtime": 1793758504.3118684,
+    "seen": 1793772080.0453293,
+    "ast_hash": "e5ddd0358bd4f2c1b9e357c1a5e52c50",
+    "semantic_hash": "e5ddd0358bd4f2c1b9e357c1a5e52c50"
+  },
+  "hello_graph.png": {
+    "mtime": 1793756428.357324,
+    "seen": 1793772080.0453305,
+    "ast_hash": "23b3b62ea454e87f18cc3aeeecb6dad6",
+    "semantic_hash": "23b3b62ea454e87f18cc3aeeecb6dad6"
+  },
+  "sds-ax-training/docs/assets/grading-flow.svg": {
+    "mtime": 1793604397.6423633,
+    "seen": 1793772080.0453317,
+    "ast_hash": "bf77cdb8a6737b22dcc1b9bd9a954a94",
+    "semantic_hash": "bf77cdb8a6737b22dcc1b9bd9a954a94"
+  },
+  "sds-ax-training/docs/assets/mission-map.svg": {
+    "mtime": 1793604397.6423633,
+    "seen": 1793772080.0453327,
+    "ast_hash": "d2f933f57b4d2a28ce6f8fa59898c214",
+    "semantic_hash": "d2f933f57b4d2a28ce6f8fa59898c214"
+  }
+}

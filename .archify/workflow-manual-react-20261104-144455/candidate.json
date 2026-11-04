@@ -1,0 +1,62 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "manual_react.py ReAct 루프",
+    "locale": "ko",
+    "quality_profile": "showcase",
+    "output": ".archify/workflow-manual-react-20261104-144455/manual-react.html"
+  },
+  "lanes": [
+    { "id": "setup", "label": "준비 (루프 전 1회)" },
+    { "id": "reason", "label": "추론 · 답변" },
+    { "id": "act", "label": "행동 · 관찰" },
+    { "id": "guard", "label": "안전장치", "variant": "exception" }
+  ],
+  "groups": [
+    { "id": "loop_reason", "label": "while turn < MAX_TURNS", "lane": "reason", "fromCol": 2, "toCol": 3, "variant": "emphasis" },
+    { "id": "loop_act", "label": "for tool_call in tool_calls", "lane": "act", "fromCol": 2, "toCol": 3, "variant": "dashed" }
+  ],
+  "mainPath": ["define_tools", "bind_tools", "init_messages", "invoke_llm", "check_calls", "final_answer"],
+  "nodes": [
+    { "id": "define_tools", "lane": "setup", "col": 0, "type": "backend", "label": "도구 정의", "sublabel": "@tool 2개", "tag": "search_employee · calculate" },
+    { "id": "bind_tools", "lane": "setup", "col": 1, "type": "cloud", "label": "llm.bind_tools", "sublabel": "도구 목록을 모델에 알림" },
+    { "id": "init_messages", "lane": "setup", "col": 2, "type": "database", "label": "messages 초기화", "sublabel": "System + Human" },
+    { "id": "invoke_llm", "lane": "reason", "col": 2, "type": "cloud", "label": "llm_with_tools.invoke", "sublabel": "(추론) turn += 1", "tag": "AIMessage 기록" },
+    { "id": "check_calls", "lane": "reason", "col": 3, "type": "security", "icon": "decision", "label": "tool_calls 있나?", "sublabel": "도구 요청 여부" },
+    { "id": "final_answer", "lane": "reason", "col": 4, "type": "frontend", "icon": "success", "label": "최종 답변 출력", "sublabel": "break" },
+    { "id": "run_tool", "lane": "act", "col": 3, "type": "backend", "label": "도구 실행", "sublabel": "(행동) tools_by_name", "tag": "tool_fn.invoke(args)" },
+    { "id": "add_tool_msg", "lane": "act", "col": 2, "type": "database", "label": "ToolMessage 추가", "sublabel": "(관찰) tool_call_id 연결" },
+    { "id": "stop", "lane": "guard", "col": 2, "type": "security", "icon": "stop", "label": "중단", "sublabel": "while…else 실행" }
+  ],
+  "edges": [
+    { "id": "e-define-bind", "from": "define_tools", "to": "bind_tools" },
+    { "id": "e-bind-init", "from": "bind_tools", "to": "init_messages" },
+    { "id": "e-init-invoke", "from": "init_messages", "to": "invoke_llm", "label": "messages" },
+    { "id": "e-invoke-check", "from": "invoke_llm", "to": "check_calls", "variant": "emphasis" },
+    { "id": "e-check-final", "from": "check_calls", "to": "final_answer", "label": "없음", "variant": "emphasis" },
+    { "id": "e-check-run", "from": "check_calls", "to": "run_tool", "label": "있음", "role": "branch" },
+    { "id": "e-run-add", "from": "run_tool", "to": "add_tool_msg", "label": "결과" },
+    { "id": "e-add-invoke", "from": "add_tool_msg", "to": "invoke_llm", "label": "재판단", "role": "return", "variant": "dashed" },
+    { "id": "e-add-stop", "from": "add_tool_msg", "to": "stop", "label": "turn = 10", "role": "error", "variant": "security" }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "messages에 쌓이는 순서",
+      "items": [
+        "SystemMessage → HumanMessage로 시작",
+        "매 턴 AIMessage를 먼저 추가하고, 요청한 도구마다 ToolMessage를 추가",
+        "다음 invoke는 이 기록 전체를 보고 판단"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "루프가 끝나는 두 가지 길",
+      "items": [
+        "tool_calls가 비면 최종 답변을 출력하고 break",
+        "break 없이 10턴을 다 쓰면 while의 else 블록이 중단 메시지 출력"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "workflow",
+  "quality": "showcase",
+  "specification": {
+    "path": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\workflow-react-agent-20261104-154837\\candidate.json",
+    "sha256": "01d53677e5f62aa0a52d6751d572df3cf32b8f4a136b2791061f93b17212b32f",
+    "bytes": 3561
+  },
+  "artifact": {
+    "path": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\workflow-react-agent-20261104-154837\\react-agent.html",
+    "sha256": "029995cfab73a42f760f03da569f35c834208dab470081ceec31694c72b5efbf",
+    "bytes": 848040
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\workflow-react-agent-20261104-154837\\react-agent.finalize.json",
+    "summaryReceipt": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\workflow-react-agent-20261104-154837\\react-agent.finalize-summary.json",
+    "browserCheckReceipt": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\workflow-react-agent-20261104-154837\\react-agent.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-04T05:45:24.506Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 4820,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

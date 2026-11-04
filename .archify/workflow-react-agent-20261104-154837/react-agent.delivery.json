@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "e0989103-f819-405e-8f39-d9a69f032360",
+  "status": "current",
+  "command": "deliver",
+  "type": "workflow",
+  "input": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\workflow-react-agent-20261104-154837\\candidate.json",
+  "output": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\workflow-react-agent-20261104-154837\\react-agent.html",
+  "specification": {
+    "sha256": "01d53677e5f62aa0a52d6751d572df3cf32b8f4a136b2791061f93b17212b32f",
+    "bytes": 3561
+  },
+  "artifact": {
+    "sha256": "029995cfab73a42f760f03da569f35c834208dab470081ceec31694c72b5efbf",
+    "bytes": 848040
+  }
+}

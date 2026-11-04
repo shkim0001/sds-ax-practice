@@ -1,0 +1,62 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "react_agent.py LangGraph ReAct 에이전트",
+    "locale": "ko",
+    "quality_profile": "showcase",
+    "output": ".archify/workflow-react-agent-20261104-154837/react-agent.html"
+  },
+  "lanes": [
+    { "id": "flow", "label": "그래프 흐름 (StateGraph)" },
+    { "id": "toolnode", "label": "ToolNode (내장)" },
+    { "id": "lookup", "label": "규칙 기반 도구" },
+    { "id": "inner", "label": "도구 안의 AI" }
+  ],
+  "groups": [
+    { "id": "cycle", "label": "Cycle: tools → agent", "lane": "flow", "fromCol": 1, "toCol": 2, "variant": "emphasis" }
+  ],
+  "mainPath": ["start", "agent", "route", "finish"],
+  "nodes": [
+    { "id": "start", "lane": "flow", "col": 0, "type": "external", "icon": "start", "label": "START", "sublabel": "HumanMessage 입력" },
+    { "id": "agent", "lane": "flow", "col": 1, "type": "cloud", "label": "agent 노드", "sublabel": "System + messages", "tag": "llm_with_tools.invoke" },
+    { "id": "route", "lane": "flow", "col": 2, "type": "security", "icon": "decision", "label": "should_continue", "sublabel": "tool_calls 있나?" },
+    { "id": "finish", "lane": "flow", "col": 3, "type": "frontend", "icon": "success", "label": "END", "sublabel": "최종 답변" },
+    { "id": "tool_node", "lane": "toolnode", "col": 2, "type": "backend", "label": "tools 노드", "sublabel": "ToolNode(tools)", "tag": "ToolMessage 포장" },
+    { "id": "search", "lane": "toolnode", "col": 3, "type": "database", "label": "search_employee", "sublabel": "이름 → 팀·이메일" },
+    { "id": "calc", "lane": "lookup", "col": 3, "type": "backend", "label": "calculate", "sublabel": "수식 eval" },
+    { "id": "classify", "lane": "inner", "col": 3, "type": "backend", "label": "classify_request", "sublabel": "문의 → 담당 부서" },
+    { "id": "inner_llm", "lane": "inner", "col": 4, "type": "cloud", "label": "llm.invoke", "sublabel": "IT지원·인사·총무" }
+  ],
+  "edges": [
+    { "id": "e-start-agent", "from": "start", "to": "agent", "label": "messages" },
+    { "id": "e-agent-route", "from": "agent", "to": "route", "label": "AIMessage", "variant": "emphasis" },
+    { "id": "e-route-end", "from": "route", "to": "finish", "label": "end", "variant": "emphasis" },
+    { "id": "e-route-tools", "from": "route", "to": "tool_node", "label": "tools", "role": "branch" },
+    { "id": "e-tools-search", "from": "tool_node", "to": "search" },
+    { "id": "e-tools-calc", "from": "tool_node", "to": "calc" },
+    { "id": "e-tools-classify", "from": "tool_node", "to": "classify" },
+    { "id": "e-classify-llm", "from": "classify", "to": "inner_llm", "label": "부서 질의", "variant": "dashed" },
+    { "id": "e-tools-agent", "from": "tool_node", "to": "agent", "label": "ToolMessage", "role": "return", "variant": "dashed" }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "manual_react.py와 대응",
+      "items": [
+        "messages 리스트 → AgentState + add_messages reducer",
+        "invoke + append → agent 노드",
+        "if not tool_calls → should_continue 라우팅",
+        "도구 실행 for문 → ToolNode, while 루프 → tools→agent 엣지"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "알아둘 점",
+      "items": [
+        "agent는 매번 SYSTEM_PROMPT를 앞에 붙여 호출하고, State에는 저장하지 않음",
+        "manual_react.py의 MAX_TURNS 같은 턴 상한이 코드에 없음 (LangGraph 기본 recursion_limit에 의존)"
+      ]
+    }
+  ]
+}
