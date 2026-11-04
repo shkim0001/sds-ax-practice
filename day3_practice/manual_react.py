@@ -26,7 +26,7 @@ def search_employee(name: str) -> str:
     # 교육용 더미 데이터입니다. 실제 사내 데이터와 무관합니다.
     employees = {
         "김하늘": "김하늘 / 클라우드운영팀 / haneul.kim@samsungsds.example.com",
-        "박도윤": "박도윤 / 물류플랫폼팀 / doyun.park@samsungsds.example.com",
+        "박도윤": "박도윤af / 물류플랫폼팀 / doyun.park@samsungsds.example.com",
     }
     return employees.get(name, f"'{name}' 님을 찾을 수 없습니다.")
 
