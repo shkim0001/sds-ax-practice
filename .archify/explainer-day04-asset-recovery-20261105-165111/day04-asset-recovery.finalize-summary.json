@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "explainer",
+  "quality": "showcase",
+  "specification": {
+    "path": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\explainer-day04-asset-recovery-20261105-165111\\candidate.archify.md",
+    "sha256": "bef44db0f3c154a2463fcb57cb3649be203daa3c1aaf9f1018e75f868b2f2863",
+    "bytes": 5945
+  },
+  "artifact": {
+    "path": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\explainer-day04-asset-recovery-20261105-165111\\day04-asset-recovery.html",
+    "sha256": "8072446314aaa484a085d65f5700223981dc5e9cd63a0e03a4092b5dfdac852a",
+    "bytes": 607708
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "not-run"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\explainer-day04-asset-recovery-20261105-165111\\day04-asset-recovery.finalize.json",
+    "summaryReceipt": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\explainer-day04-asset-recovery-20261105-165111\\day04-asset-recovery.finalize-summary.json"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 4512,
+  "browserCheck": {
+    "requested": false,
+    "ran": false
+  }
+}

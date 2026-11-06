@@ -1,0 +1,67 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "get_asset_status 재시도·폴백 흐름",
+    "locale": "ko",
+    "quality_profile": "showcase",
+    "output": ".archify/workflow-asset-status-recovery-20261105-164932/asset-status-recovery.html"
+  },
+  "lanes": [
+    { "id": "caller", "label": "호출자 (Agent · MCP)" },
+    { "id": "primary", "label": "기본 조회 경로" },
+    { "id": "policy", "label": "실패 분류 · 재시도", "variant": "exception" },
+    { "id": "fallback", "label": "대체 경로" }
+  ],
+  "phases": [
+    { "id": "intake", "label": "입력", "fromCol": 0, "toCol": 1 },
+    { "id": "lookup", "label": "조회 + 재시도", "fromCol": 2, "toCol": 3, "variant": "emphasis" },
+    { "id": "reply", "label": "응답 문자열", "fromCol": 4, "toCol": 5, "variant": "dashed" }
+  ],
+  "groups": [
+    { "id": "retry_loop", "label": "재시도 루프", "lane": "policy", "fromCol": 2, "toCol": 3, "variant": "dashed" }
+  ],
+  "mainPath": ["call", "validate", "fetch", "format", "ok"],
+  "nodes": [
+    { "id": "call", "lane": "caller", "col": 0, "type": "external", "label": "get_asset_status", "sublabel": "asset_id, fetch=None" },
+    { "id": "ok", "lane": "caller", "col": 5, "type": "frontend", "label": "정상 응답", "sublabel": "재시도 N회 후 성공 표기", "icon": "success" },
+    { "id": "validate", "lane": "primary", "col": 1, "type": "backend", "label": "asset_id 검증", "sublabel": "빈 값 → 안내 문자열" },
+    { "id": "fetch", "lane": "primary", "col": 2, "type": "cloud", "label": "fetch(asset_id)", "sublabel": "외부 백엔드 호출", "tag": "총 ≤ MAX_RETRIES(3)회" },
+    { "id": "format", "lane": "primary", "col": 4, "type": "backend", "label": "_format_asset", "sublabel": "응답 값 + _redact" },
+    { "id": "classify", "lane": "policy", "col": 2, "type": "security", "label": "classify_failure", "sublabel": "예외 타입 + 메시지", "icon": "decision" },
+    { "id": "wait", "lane": "policy", "col": 3, "type": "messagebus", "label": "대기 후 재시도", "sublabel": "0.05s · backoff 0.2→0.4s", "icon": "waiting" },
+    { "id": "backup", "lane": "fallback", "col": 3, "type": "database", "label": "get_asset_status_backup", "sublabel": "DATA 캐시 조회" },
+    { "id": "fbreply", "lane": "fallback", "col": 5, "type": "frontend", "label": "폴백 안내 문자열", "sublabel": "backup 이름 + 분류 + 호출 수", "icon": "flag" }
+  ],
+  "edges": [
+    { "id": "e-call", "from": "call", "to": "validate", "label": "호출", "variant": "emphasis" },
+    { "id": "e-valid", "from": "validate", "to": "fetch", "label": "유효 ID", "variant": "default" },
+    { "id": "e-success", "from": "fetch", "to": "format", "label": "성공", "variant": "emphasis" },
+    { "id": "e-ok", "from": "format", "to": "ok", "label": "반환", "variant": "emphasis" },
+    { "id": "e-raise", "from": "fetch", "to": "classify", "label": "예외", "variant": "security", "role": "error" },
+    { "id": "e-transient", "from": "classify", "to": "wait", "label": "retryable · backoff", "variant": "dashed", "role": "branch" },
+    { "id": "e-retry", "from": "wait", "to": "fetch", "label": "재시도", "variant": "dashed", "role": "return" },
+    { "id": "e-fatal", "from": "classify", "to": "backup", "label": "fatal: 즉시", "variant": "security", "role": "error" },
+    { "id": "e-exhausted", "from": "wait", "to": "backup", "label": "상한 도달", "variant": "security", "role": "error" },
+    { "id": "e-cache", "from": "backup", "to": "fbreply", "label": "캐시 값", "variant": "default" }
+  ],
+  "cards": [
+    {
+      "dot": "rose",
+      "title": "classify_failure 판정",
+      "items": [
+        "backoff: 429 · rate limit · too many requests",
+        "fatal: LookupError · ValueError · 권한/스키마 오류",
+        "retryable: TimeoutError · ConnectionError · 그 외"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "안전장치",
+      "items": [
+        "모든 반환·로그 문자열은 _redact로 BACKEND_TOKEN 마스킹",
+        "바깥 try/except: 어떤 경우에도 예외를 던지지 않음"
+      ]
+    }
+  ]
+}

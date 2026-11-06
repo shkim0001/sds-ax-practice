@@ -1,0 +1,29 @@
+{
+  "mcpServers": {
+    "sds-company-data": {
+      "type": "stdio",
+      "command": "C:/Users/Admin/Desktop/sds-ax-practice/.venv/Scripts/python.exe",
+      "args": ["C:/Users/Admin/Desktop/sds-ax-practice/day4_practice/mcp_server.py"]
+    },
+    "time": {
+      "type": "stdio",
+      "command": "C:/Users/Admin/Desktop/sds-ax-practice/.venv/Scripts/python.exe",
+      "args": ["-m", "mcp_server_time", "--local-timezone", "Asia/Seoul"]
+    },
+    "duckduckgo": {
+      "type": "stdio",
+      "command": "C:/Users/Admin/Desktop/sds-ax-practice/.venv/Scripts/python.exe",
+      "args": ["-m", "duckduckgo_mcp_server.server"]
+    },
+    "fetch": {
+      "type": "stdio",
+      "command": "C:/Users/Admin/Desktop/sds-ax-practice/.venv/Scripts/python.exe",
+      "args": ["-m", "mcp_server_fetch"]
+    },
+    "apt-trade": {
+      "type": "stdio",
+      "command": "C:/Users/Admin/Desktop/sds-ax-practice/.venv/Scripts/python.exe",
+      "args": ["C:/Users/Admin/Desktop/sds-ax-practice/day4_practice/apt_trade_mcp.py"]
+    }
+  }
+}

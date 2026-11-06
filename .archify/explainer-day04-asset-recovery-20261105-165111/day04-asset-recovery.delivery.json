@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "e9b68e82-5bd3-4e01-b65c-bb532b8fd785",
+  "status": "current",
+  "command": "deliver",
+  "type": "explainer",
+  "input": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\explainer-day04-asset-recovery-20261105-165111\\candidate.archify.md",
+  "output": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\explainer-day04-asset-recovery-20261105-165111\\day04-asset-recovery.html",
+  "specification": {
+    "sha256": "bef44db0f3c154a2463fcb57cb3649be203daa3c1aaf9f1018e75f868b2f2863",
+    "bytes": 5945
+  },
+  "artifact": {
+    "sha256": "8072446314aaa484a085d65f5700223981dc5e9cd63a0e03a4092b5dfdac852a",
+    "bytes": 607708
+  },
+  "explainer": {
+    "preparedSha256": "3bc65a133b73dba8103ce90209b58949b4786c5c32d2e34fccc446e8abc7d4b7",
+    "dependencies": [
+      {
+        "kind": "diagram-spec",
+        "id": "recovery-flow",
+        "path": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\explainer-day04-asset-recovery-20261105-165111\\asset-status.workflow.json",
+        "relativePath": "asset-status.workflow.json",
+        "sha256": "a60f097b96760db00f114992ebc81b0c704380ecf7fde88542ca69c9f4b5c550",
+        "bytes": 4174
+      }
+    ]
+  }
+}

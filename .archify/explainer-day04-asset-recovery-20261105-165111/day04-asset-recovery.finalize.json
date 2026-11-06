@@ -1,0 +1,336 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "explainer",
+  "quality": "showcase",
+  "startedAt": "2026-11-05T07:51:49.794Z",
+  "specification": {
+    "path": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\explainer-day04-asset-recovery-20261105-165111\\candidate.archify.md",
+    "sha256": "bef44db0f3c154a2463fcb57cb3649be203daa3c1aaf9f1018e75f868b2f2863",
+    "bytes": 5945
+  },
+  "artifact": {
+    "path": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\explainer-day04-asset-recovery-20261105-165111\\day04-asset-recovery.html",
+    "sha256": "8072446314aaa484a085d65f5700223981dc5e9cd63a0e03a4092b5dfdac852a",
+    "bytes": 607708
+  },
+  "stages": {
+    "browser-check": {
+      "status": "not-run",
+      "execution": "not-requested"
+    },
+    "validate": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": null,
+      "execution": "embedded-in-deliver",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Users\\Admin\\.claude\\skills\\archify\\bin\\archify.mjs",
+        "deliver",
+        "explainer",
+        "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\explainer-day04-asset-recovery-20261105-165111\\candidate.archify.md",
+        "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\explainer-day04-asset-recovery-20261105-165111\\day04-asset-recovery.html",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": true,
+        "command": "validate",
+        "specification": {
+          "sha256": "bef44db0f3c154a2463fcb57cb3649be203daa3c1aaf9f1018e75f868b2f2863",
+          "bytes": 5945
+        },
+        "validation": {
+          "checksPassed": 4,
+          "checkCount": 4,
+          "compositionProfile": "showcase",
+          "compositionStatus": "pass",
+          "errors": 0,
+          "warnings": 0
+        }
+      }
+    },
+    "deliver": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": 2370,
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Users\\Admin\\.claude\\skills\\archify\\bin\\archify.mjs",
+        "deliver",
+        "explainer",
+        "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\explainer-day04-asset-recovery-20261105-165111\\candidate.archify.md",
+        "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\explainer-day04-asset-recovery-20261105-165111\\day04-asset-recovery.html",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "receiptId": "e9b68e82-5bd3-4e01-b65c-bb532b8fd785",
+        "ok": true,
+        "command": "deliver",
+        "type": "explainer",
+        "input": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\explainer-day04-asset-recovery-20261105-165111\\candidate.archify.md",
+        "output": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\explainer-day04-asset-recovery-20261105-165111\\day04-asset-recovery.html",
+        "explainer": {
+          "preparedSha256": "3bc65a133b73dba8103ce90209b58949b4786c5c32d2e34fccc446e8abc7d4b7",
+          "dependencies": [
+            {
+              "kind": "diagram-spec",
+              "id": "recovery-flow",
+              "path": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\explainer-day04-asset-recovery-20261105-165111\\asset-status.workflow.json",
+              "relativePath": "asset-status.workflow.json",
+              "sha256": "a60f097b96760db00f114992ebc81b0c704380ecf7fde88542ca69c9f4b5c550",
+              "bytes": 4174
+            }
+          ]
+        },
+        "specification": {
+          "sha256": "bef44db0f3c154a2463fcb57cb3649be203daa3c1aaf9f1018e75f868b2f2863",
+          "bytes": 5945
+        },
+        "artifact": {
+          "sha256": "8072446314aaa484a085d65f5700223981dc5e9cd63a0e03a4092b5dfdac852a",
+          "bytes": 607708
+        },
+        "validation": {
+          "checksPassed": 4,
+          "checkCount": 4,
+          "compositionProfile": "showcase",
+          "compositionStatus": "pass",
+          "errors": 0,
+          "warnings": 0
+        },
+        "update": {
+          "status": "unavailable",
+          "installedVersion": null,
+          "availableVersion": null,
+          "releaseNotes": null,
+          "checkedAt": null,
+          "source": null,
+          "noticeRequired": false,
+          "noticeText": null,
+          "reason": "disabled"
+        }
+      }
+    },
+    "check": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": 1604,
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Users\\Admin\\.claude\\skills\\archify\\bin\\archify.mjs",
+        "check",
+        "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\explainer-day04-asset-recovery-20261105-165111\\day04-asset-recovery.html",
+        "--require-provenance"
+      ],
+      "receipt": {
+        "ok": true,
+        "file": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\explainer-day04-asset-recovery-20261105-165111\\day04-asset-recovery.html",
+        "family": "explainer",
+        "artifact": {
+          "sha256": "8072446314aaa484a085d65f5700223981dc5e9cd63a0e03a4092b5dfdac852a",
+          "bytes": 607708
+        },
+        "checks": [
+          {
+            "name": "explainer_structure",
+            "ok": true,
+            "details": [
+              "60 unique DOM IDs"
+            ]
+          },
+          {
+            "name": "explainer_payload_identity",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "explainer_dependencies",
+            "ok": true,
+            "details": [
+              "1 frozen dependencies"
+            ]
+          },
+          {
+            "name": "explainer_native_diagrams",
+            "ok": true,
+            "details": [
+              "recovery-flow: pass"
+            ]
+          }
+        ],
+        "composition": {
+          "schemaVersion": 1,
+          "profile": "showcase",
+          "status": "pass",
+          "summary": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "issues": [],
+          "nativeDiagrams": [
+            {
+              "id": "recovery-flow",
+              "receipt": {
+                "ok": true,
+                "file": "C:\\Users\\Admin\\AppData\\Local\\Temp\\archify-explainer-check-c40WVa\\child.html",
+                "artifact": {
+                  "sha256": "791c56254ce063e118c3897185a55b954f9bb013563a0459afa0f41dd8aaceae",
+                  "bytes": 852305
+                },
+                "checks": [
+                  {
+                    "name": "single_svg",
+                    "ok": true,
+                    "details": [
+                      "found 1 <svg> block(s)"
+                    ]
+                  },
+                  {
+                    "name": "finite_svg",
+                    "ok": true,
+                    "details": []
+                  },
+                  {
+                    "name": "orthogonal_arrows",
+                    "ok": true,
+                    "details": []
+                  },
+                  {
+                    "name": "label_route_clearance",
+                    "ok": true,
+                    "details": []
+                  },
+                  {
+                    "name": "relationship_crossings",
+                    "ok": true,
+                    "details": []
+                  },
+                  {
+                    "name": "relationship_corridors",
+                    "ok": true,
+                    "details": []
+                  },
+                  {
+                    "name": "container_border_runs",
+                    "ok": true,
+                    "details": []
+                  },
+                  {
+                    "name": "route_rhythm",
+                    "ok": true,
+                    "details": []
+                  },
+                  {
+                    "name": "legend_clearance",
+                    "ok": true,
+                    "details": []
+                  }
+                ],
+                "composition": {
+                  "schemaVersion": 1,
+                  "profile": "showcase",
+                  "status": "pass",
+                  "summary": {
+                    "errors": 0,
+                    "warnings": 0
+                  },
+                  "metrics": {
+                    "properCrossings": 0,
+                    "resolvedCrossovers": 0,
+                    "ambiguousCorridors": 0,
+                    "arrowheadCollisions": 0,
+                    "containerBorderRuns": 0,
+                    "labelRouteClearanceIssues": 0,
+                    "labelCanvasOverflowIssues": 0,
+                    "minLabelRouteClearance": 40,
+                    "desktopReadabilityIssues": 0,
+                    "viewportHeightIssues": 0,
+                    "minProjectedNodeTextPx": 6,
+                    "maxBends": 0,
+                    "routesOverSuggestedBends": 0,
+                    "maxStretch": 1,
+                    "routesOverSuggestedStretch": 0,
+                    "minSegmentPx": 8,
+                    "minInteriorSegmentPx": null,
+                    "shortSegmentCount": 1,
+                    "shortEndpointSegmentCount": 1,
+                    "shortInteriorSegmentCount": 0,
+                    "microSegmentCount": 0
+                  },
+                  "suggestedLimits": {
+                    "bendsPerRelationship": 2,
+                    "stretch": 1.35,
+                    "segmentPx": 16,
+                    "microSegmentPx": 8
+                  },
+                  "routeReview": {
+                    "crossings": [],
+                    "detours": []
+                  },
+                  "leadingSpace": {
+                    "measured": false,
+                    "reviewSuggested": false
+                  },
+                  "desktopReadability": {
+                    "budgetBasis": "legacy-930",
+                    "readerContract": "declared-wide-v1",
+                    "availableDiagramWidth": 930,
+                    "actualBudgetPx": 930,
+                    "limit": "legacy",
+                    "requestedTargetPx": null,
+                    "requestedTargetMet": null,
+                    "hardFloorPx": 6,
+                    "hardFloorMet": true,
+                    "minimumOwner": {
+                      "kind": "node",
+                      "id": "ok"
+                    },
+                    "minimumSourceTextPx": 6,
+                    "minimumProjectedTextPx": 6,
+                    "semanticTextCount": 28
+                  },
+                  "issues": []
+                }
+              }
+            }
+          ]
+        },
+        "diagnostics": [],
+        "provenance": "current",
+        "deliveryReceiptId": "e9b68e82-5bd3-4e01-b65c-bb532b8fd785"
+      }
+    }
+  },
+  "browserCheck": {
+    "requested": false,
+    "ran": false
+  },
+  "diagnostics": [],
+  "evidence": {
+    "receipt": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\explainer-day04-asset-recovery-20261105-165111\\day04-asset-recovery.finalize.json",
+    "summaryReceipt": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\explainer-day04-asset-recovery-20261105-165111\\day04-asset-recovery.finalize-summary.json"
+  },
+  "visualReview": "not-requested",
+  "finishedAt": "2026-11-05T07:51:54.307Z",
+  "durationMs": 4512,
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "timeout"
+  }
+}

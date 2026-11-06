@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "workflow",
+  "quality": "showcase",
+  "specification": {
+    "path": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\workflow-asset-status-recovery-20261105-164932\\candidate.json",
+    "sha256": "a2b88d19e1281dbeae2eb793ce10cdc8078d3beb40676e8b5245300c1e172fef",
+    "bytes": 4178
+  },
+  "artifact": {
+    "path": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\workflow-asset-status-recovery-20261105-164932\\asset-status-recovery.html",
+    "sha256": "791c56254ce063e118c3897185a55b954f9bb013563a0459afa0f41dd8aaceae",
+    "bytes": 852305
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\workflow-asset-status-recovery-20261105-164932\\asset-status-recovery.finalize.json",
+    "summaryReceipt": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\workflow-asset-status-recovery-20261105-164932\\asset-status-recovery.finalize-summary.json",
+    "browserCheckReceipt": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\workflow-asset-status-recovery-20261105-164932\\asset-status-recovery.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-04T05:45:24.506Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 4629,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}
