@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "ba503444-99a7-4be9-a107-ba462e9c91d4",
+  "status": "current",
+  "command": "deliver",
+  "type": "workflow",
+  "input": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\workflow-asset-status-recovery-20261105-164932\\candidate.json",
+  "output": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\workflow-asset-status-recovery-20261105-164932\\asset-status-recovery.html",
+  "specification": {
+    "sha256": "a2b88d19e1281dbeae2eb793ce10cdc8078d3beb40676e8b5245300c1e172fef",
+    "bytes": 4178
+  },
+  "artifact": {
+    "sha256": "791c56254ce063e118c3897185a55b954f9bb013563a0459afa0f41dd8aaceae",
+    "bytes": 852305
+  }
+}

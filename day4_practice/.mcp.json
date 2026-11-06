@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "sds-company-data": {
+      "type": "stdio",
+      "command": "C:/Users/Admin/Desktop/sds-ax-practice/.venv/Scripts/python.exe",
+      "args": ["C:/Users/Admin/Desktop/sds-ax-practice/day4_practice/mcp_server.py"]
+    }
+  }
+}

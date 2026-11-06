@@ -1,0 +1,4 @@
+{"event": "before_model", "message_type": "HumanMessage", "preview": "김하늘 소속 팀 알려줘", "time": "2026-11-06T10:11:26.344102"}
+{"event": "after_model", "message_type": "AIMessage", "tool_calls": ["search_employee"], "total_tokens": 764, "time": "2026-11-06T10:11:27.603836"}
+{"event": "before_model", "message_type": "ToolMessage", "preview": "김하늘 / 클라우드운영팀 / haneul.kim@samsungsds.example.com", "time": "2026-11-06T10:11:27.607787"}
+{"event": "after_model", "message_type": "AIMessage", "total_tokens": 836, "time": "2026-11-06T10:11:28.348714"}
