@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "9af4a892-698d-4307-a928-d59adaca124c",
+  "status": "current",
+  "command": "deliver",
+  "type": "sequence",
+  "input": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\sequence-interrupt-approval-20261106-112851\\candidate.json",
+  "output": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\sequence-interrupt-approval-20261106-112851\\interrupt-approval.html",
+  "specification": {
+    "sha256": "e92fbfceec5bdbf6362be0adca4ab73271d2b2b112e30cd823f64598161a6688",
+    "bytes": 7264
+  },
+  "artifact": {
+    "sha256": "fada71c11f88e98f087982e903ab0ce91153af3f74aa381f3fececf341a65b9e",
+    "bytes": 853471
+  }
+}

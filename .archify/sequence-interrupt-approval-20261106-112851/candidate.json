@@ -1,0 +1,323 @@
+{
+  "schema_version": 1,
+  "diagram_type": "sequence",
+  "meta": {
+    "title": "interrupt_basic.py 사람 승인 흐름",
+    "locale": "ko",
+    "quality_profile": "showcase",
+    "output": ".archify/sequence-interrupt-approval-20261106-112851/interrupt-approval.html"
+  },
+  "participants": [
+    {
+      "id": "user",
+      "type": "external",
+      "label": "사람",
+      "sublabel": "input() 응답"
+    },
+    {
+      "id": "main",
+      "type": "frontend",
+      "label": "main()",
+      "sublabel": "스크립트"
+    },
+    {
+      "id": "graph",
+      "type": "backend",
+      "label": "graph",
+      "sublabel": "StateGraph 컴파일본"
+    },
+    {
+      "id": "propose",
+      "type": "backend",
+      "label": "propose",
+      "sublabel": "propose_action"
+    },
+    {
+      "id": "approval",
+      "type": "security",
+      "label": "approval",
+      "sublabel": "human_approval"
+    },
+    {
+      "id": "execute",
+      "type": "backend",
+      "label": "execute",
+      "sublabel": "execute"
+    },
+    {
+      "id": "ckpt",
+      "type": "database",
+      "label": "SqliteSaver",
+      "sublabel": "checkpoints.sqlite"
+    }
+  ],
+  "segments": [
+    {
+      "from": 150,
+      "to": 356,
+      "label": "1차 invoke: interrupt에서 멈춤"
+    },
+    {
+      "from": 370,
+      "to": 476,
+      "label": "멈춘 상태 확인 + 사람에게 묻기"
+    },
+    {
+      "from": 490,
+      "to": 738,
+      "label": "2차 invoke: Command로 재개"
+    }
+  ],
+  "messages": [
+    {
+      "id": "invoke-1",
+      "from": "main",
+      "to": "graph",
+      "y": 160,
+      "label": "invoke(작업 시작, thread_id=hitl_demo)",
+      "variant": "emphasis"
+    },
+    {
+      "id": "run-propose",
+      "from": "graph",
+      "to": "propose",
+      "y": 188,
+      "label": "실행",
+      "variant": "default"
+    },
+    {
+      "id": "pending",
+      "from": "propose",
+      "to": "graph",
+      "y": 216,
+      "label": "pending_action: 출장 신청서 제출",
+      "variant": "return"
+    },
+    {
+      "id": "run-approval-1",
+      "from": "graph",
+      "to": "approval",
+      "y": 244,
+      "label": "실행",
+      "variant": "default"
+    },
+    {
+      "id": "interrupt",
+      "from": "approval",
+      "to": "graph",
+      "y": 272,
+      "label": "interrupt(type, action, question)",
+      "variant": "security",
+      "note": "노드가 이 줄에서 멈춥니다"
+    },
+    {
+      "id": "save",
+      "from": "graph",
+      "to": "ckpt",
+      "y": 316,
+      "label": "State + 멈춘 지점 저장",
+      "variant": "dashed"
+    },
+    {
+      "id": "return-1",
+      "from": "graph",
+      "to": "main",
+      "y": 344,
+      "label": "invoke 반환 (중단 상태)",
+      "variant": "return"
+    },
+    {
+      "id": "get-state",
+      "from": "main",
+      "to": "graph",
+      "y": 380,
+      "label": "get_state(config)",
+      "variant": "default"
+    },
+    {
+      "id": "state-info",
+      "from": "graph",
+      "to": "main",
+      "y": 408,
+      "label": "next=('approval',) · 요청 내용",
+      "variant": "return"
+    },
+    {
+      "id": "ask",
+      "from": "main",
+      "to": "user",
+      "y": 436,
+      "label": "승인하시겠습니까? (yes/no)",
+      "variant": "default"
+    },
+    {
+      "id": "answer",
+      "from": "user",
+      "to": "main",
+      "y": 464,
+      "label": "yes / no",
+      "variant": "return"
+    },
+    {
+      "id": "invoke-2",
+      "from": "main",
+      "to": "graph",
+      "y": 500,
+      "label": "invoke(Command(resume=결정))",
+      "variant": "emphasis"
+    },
+    {
+      "id": "load",
+      "from": "graph",
+      "to": "ckpt",
+      "y": 528,
+      "label": "같은 thread_id 상태 불러오기",
+      "variant": "dashed"
+    },
+    {
+      "id": "loaded",
+      "from": "ckpt",
+      "to": "graph",
+      "y": 556,
+      "label": "저장된 State",
+      "variant": "return"
+    },
+    {
+      "id": "run-approval-2",
+      "from": "graph",
+      "to": "approval",
+      "y": 584,
+      "label": "approval 노드를 처음부터 다시 실행",
+      "variant": "emphasis",
+      "note": "interrupt()가 이번엔 resume 값을 반환"
+    },
+    {
+      "id": "decision",
+      "from": "approval",
+      "to": "graph",
+      "y": 642,
+      "label": "decision: yes / no",
+      "variant": "return"
+    },
+    {
+      "id": "run-execute",
+      "from": "graph",
+      "to": "execute",
+      "y": 670,
+      "label": "실행",
+      "variant": "default"
+    },
+    {
+      "id": "ai-message",
+      "from": "execute",
+      "to": "graph",
+      "y": 698,
+      "label": "AIMessage: 실행됨 / 실행 거부됨",
+      "variant": "return"
+    },
+    {
+      "id": "result",
+      "from": "graph",
+      "to": "main",
+      "y": 726,
+      "label": "result (END)",
+      "variant": "return"
+    }
+  ],
+  "activations": [
+    {
+      "participant": "main",
+      "from": 155,
+      "to": 732,
+      "type": "frontend"
+    },
+    {
+      "participant": "graph",
+      "from": 160,
+      "to": 350,
+      "type": "backend"
+    },
+    {
+      "participant": "graph",
+      "from": 380,
+      "to": 412,
+      "type": "backend"
+    },
+    {
+      "participant": "graph",
+      "from": 500,
+      "to": 730,
+      "type": "backend"
+    },
+    {
+      "participant": "propose",
+      "from": 188,
+      "to": 220,
+      "type": "backend"
+    },
+    {
+      "participant": "approval",
+      "from": 244,
+      "to": 278,
+      "type": "security"
+    },
+    {
+      "participant": "approval",
+      "from": 584,
+      "to": 646,
+      "type": "security"
+    },
+    {
+      "participant": "ckpt",
+      "from": 311,
+      "to": 322,
+      "type": "database"
+    },
+    {
+      "participant": "ckpt",
+      "from": 528,
+      "to": 560,
+      "type": "database"
+    },
+    {
+      "participant": "execute",
+      "from": 670,
+      "to": 702,
+      "type": "backend"
+    },
+    {
+      "participant": "user",
+      "from": 436,
+      "to": 468,
+      "type": "external"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "violet",
+      "title": "체크포인터가 필수인 이유",
+      "items": [
+        "interrupt는 State를 저장하고 1차 invoke를 그대로 끝냅니다",
+        "2차 invoke는 같은 thread_id로 저장된 State를 이어받습니다",
+        "체크포인터 없이 compile하면 interrupt 시점에 오류가 납니다"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "재개 규칙",
+      "items": [
+        "Command(resume=값)의 값이 interrupt()의 반환값이 됩니다",
+        "approval 노드는 멈춘 줄이 아니라 처음부터 다시 실행됩니다",
+        "그래서 interrupt 앞에 둔 코드는 두 번 실행됩니다"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "실행 결과",
+      "items": [
+        "yes: 실행됨: 출장 신청서 제출: 부산 2일, 예산 800,000원",
+        "yes가 아닌 모든 입력: 실행 거부됨"
+      ]
+    }
+  ]
+}

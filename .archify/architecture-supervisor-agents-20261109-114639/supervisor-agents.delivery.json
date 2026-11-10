@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "60d31483-befc-4f5a-85a8-25ee3fd6ce1b",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\architecture-supervisor-agents-20261109-114639\\candidate.json",
+  "output": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\architecture-supervisor-agents-20261109-114639\\supervisor-agents.html",
+  "specification": {
+    "sha256": "60f1cbf29d12a00a55eb1d6c459af7b4954cecb211c65bf27da81fbaf2343d14",
+    "bytes": 3584
+  },
+  "artifact": {
+    "sha256": "41e658623aea40bcf44b2175da3d8e68f0df0a199ccbfa8d09a7f2a3c73bee96",
+    "bytes": 849872
+  }
+}

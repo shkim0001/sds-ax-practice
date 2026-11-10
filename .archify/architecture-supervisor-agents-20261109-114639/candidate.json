@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "supervisor_assembled.py Supervisor + 서브 Agent 3종",
+    "locale": "ko",
+    "quality_profile": "showcase",
+    "output": ".archify/architecture-supervisor-agents-20261109-114639/supervisor-agents.html"
+  },
+  "components": [
+    { "id": "asker", "type": "external", "label": "사용자", "sublabel": "질문 1건", "pos": [40, 196], "size": [120, 60] },
+    { "id": "runner", "type": "frontend", "label": "run(question)", "sublabel": "app.stream · updates", "pos": [220, 190], "size": [160, 72], "tag": "recursion_limit 25" },
+    { "id": "supervisor", "type": "backend", "label": "Supervisor", "sublabel": "Haiku 4.5 · temp 0", "pos": [540, 190], "size": [180, 72], "tag": "배분 → 결과 종합" },
+    { "id": "data-agent", "type": "backend", "label": "data_agent", "sublabel": "Sonnet 4.5 · create_agent", "pos": [900, 40], "size": [170, 72], "tag": "범위 밖이면 거절" },
+    { "id": "research-agent", "type": "backend", "label": "research_agent", "sublabel": "Sonnet 4.5 · create_agent", "pos": [900, 190], "size": [170, 72], "tag": "근거 문장 인용" },
+    { "id": "general-agent", "type": "backend", "label": "general_agent", "sublabel": "Sonnet 4.5 · 도구 없음", "pos": [900, 340], "size": [170, 72], "tag": "범위 밖 안내" },
+    { "id": "data-tools", "type": "database", "label": "사내 데이터 도구 4종", "sublabel": "search_employee 외 3종", "pos": [1220, 40], "size": [190, 72], "tag": "더미 dict" },
+    { "id": "docs-tool", "type": "database", "label": "retrieve_docs", "sublabel": "연차·재택·출장 규정", "pos": [1220, 190], "size": [190, 72], "tag": "더미 dict" }
+  ],
+  "boundaries": [
+    { "kind": "region", "label": "app = supervisor.compile()", "wraps": ["supervisor", "data-agent", "research-agent", "general-agent", "data-tools", "docs-tool"] }
+  ],
+  "connections": [
+    { "id": "ask", "from": "asker", "to": "runner", "label": "질문" },
+    { "id": "stream-in", "from": "runner", "to": "supervisor", "label": "HumanMessage 입력", "variant": "emphasis" },
+    { "id": "stream-out", "from": "supervisor", "to": "runner", "label": "updates 이벤트" },
+    { "id": "route-data", "from": "supervisor", "to": "data-agent", "label": "임직원·자산·프로젝트" },
+    { "id": "route-research", "from": "supervisor", "to": "research-agent", "label": "연차·재택·출장 규정" },
+    { "id": "route-general", "from": "supervisor", "to": "general-agent", "label": "인사말·잡담·기타" },
+    { "id": "data-call", "from": "data-agent", "to": "data-tools", "label": "도구 호출" },
+    { "id": "docs-call", "from": "research-agent", "to": "docs-tool", "label": "query 검색" }
+  ],
+  "cards": [
+    { "dot": "rose", "title": "Supervisor 규칙", "items": ["직접 답을 지어내지 않고 담당 Agent로 확인", "복합 질문은 Agent를 순서대로 여러 번 호출", "각 Agent 결과는 Supervisor로 돌아와 하나의 답변으로 종합"] },
+    { "dot": "emerald", "title": "서브 Agent", "items": ["모두 같은 worker_llm(Sonnet 4.5, us-east-1) 사용", "data_agent: search_employee, list_team_members, get_asset, list_projects", "도구 이름·인자는 4일차 MCP 서버와 동일 (나중에 교체 예정)"] },
+    { "dot": "cyan", "title": "run() 관찰", "items": ["supervisor 외 노드를 called 목록에 기록해 호출 순서 출력", "도구 호출과 메시지 앞 130자를 노드별로 출력", "실행 후 supervisor_graph.png로 그래프 저장 시도"] }
+  ]
+}

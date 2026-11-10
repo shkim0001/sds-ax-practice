@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\architecture-supervisor-agents-20261109-114639\\candidate.json",
+    "sha256": "60f1cbf29d12a00a55eb1d6c459af7b4954cecb211c65bf27da81fbaf2343d14",
+    "bytes": 3584
+  },
+  "artifact": {
+    "path": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\architecture-supervisor-agents-20261109-114639\\supervisor-agents.html",
+    "sha256": "41e658623aea40bcf44b2175da3d8e68f0df0a199ccbfa8d09a7f2a3c73bee96",
+    "bytes": 849872
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\architecture-supervisor-agents-20261109-114639\\supervisor-agents.finalize.json",
+    "summaryReceipt": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\architecture-supervisor-agents-20261109-114639\\supervisor-agents.finalize-summary.json",
+    "browserCheckReceipt": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\architecture-supervisor-agents-20261109-114639\\supervisor-agents.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-09T02:47:00.880Z",
+    "source": "network",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 5587,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

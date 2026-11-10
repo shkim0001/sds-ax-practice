@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "sequence",
+  "quality": "showcase",
+  "specification": {
+    "path": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\sequence-interrupt-approval-20261106-112851\\candidate.json",
+    "sha256": "e92fbfceec5bdbf6362be0adca4ab73271d2b2b112e30cd823f64598161a6688",
+    "bytes": 7264
+  },
+  "artifact": {
+    "path": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\sequence-interrupt-approval-20261106-112851\\interrupt-approval.html",
+    "sha256": "fada71c11f88e98f087982e903ab0ce91153af3f74aa381f3fececf341a65b9e",
+    "bytes": 853471
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\sequence-interrupt-approval-20261106-112851\\interrupt-approval.finalize.json",
+    "summaryReceipt": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\sequence-interrupt-approval-20261106-112851\\interrupt-approval.finalize-summary.json",
+    "browserCheckReceipt": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\sequence-interrupt-approval-20261106-112851\\interrupt-approval.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-06T02:29:30.124Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 4612,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

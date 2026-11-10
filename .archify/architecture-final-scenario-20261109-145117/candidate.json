@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "final_scenario.py RAG + MCP + Supervisor",
+    "locale": "ko",
+    "quality_profile": "showcase",
+    "output": ".archify/architecture-final-scenario-20261109-145117/final-scenario.html"
+  },
+  "components": [
+    { "id": "entry", "type": "frontend", "label": "main()", "sublabel": "app.astream · updates", "pos": [40, 190], "size": [170, 72], "tag": "recursion_limit 30" },
+    { "id": "supervisor", "type": "backend", "label": "Supervisor", "sublabel": "Sonnet 4.5 · temp 0", "pos": [380, 190], "size": [180, 72], "tag": "결론: 가능·불가·조건부" },
+    { "id": "data-agent", "type": "backend", "label": "data_agent", "sublabel": "MCP 도구 4종", "pos": [740, 40], "size": [170, 72], "tag": "build_app()에서 생성" },
+    { "id": "research-agent", "type": "backend", "label": "research_agent", "sublabel": "retrieve_docs", "pos": [740, 190], "size": [170, 72], "tag": "출처 표기" },
+    { "id": "general-agent", "type": "backend", "label": "general_agent", "sublabel": "도구 없음", "pos": [740, 340], "size": [170, 72], "tag": "인사말·잡담" },
+    { "id": "mcp-server", "type": "backend", "label": "mcp_server.py", "sublabel": "fastmcp · day6_checkpoint", "pos": [1070, 40], "size": [200, 72], "tag": "SERVER_PATH 절대경로" },
+    { "id": "json-data", "type": "database", "label": "JSON 3종", "sublabel": "employees·assets·projects", "pos": [1420, 40], "size": [170, 72], "tag": "교육용 더미" },
+    { "id": "chroma", "type": "database", "label": "Chroma", "sublabel": "sds_policies · k=3", "pos": [1070, 190], "size": [200, 72], "tag": "CHROMA_DIR" },
+    { "id": "titan", "type": "cloud", "label": "Titan Embed v2", "sublabel": "Bedrock us-east-1", "pos": [1420, 190], "size": [170, 72] }
+  ],
+  "boundaries": [
+    { "kind": "region", "label": "stdio 자식 프로세스", "wraps": ["mcp-server"] }
+  ],
+  "connections": [
+    { "id": "stream-in", "from": "entry", "to": "supervisor", "label": "HumanMessage", "variant": "emphasis" },
+    { "id": "stream-out", "from": "supervisor", "to": "entry", "label": "updates 이벤트" },
+    { "id": "route-data", "from": "supervisor", "to": "data-agent", "label": "임직원·자산·프로젝트" },
+    { "id": "route-research", "from": "supervisor", "to": "research-agent", "label": "연차·재택·출장 규정" },
+    { "id": "route-general", "from": "supervisor", "to": "general-agent", "label": "인사말·잡담" },
+    { "id": "mcp-call", "from": "data-agent", "to": "mcp-server", "label": "stdio 도구 호출" },
+    { "id": "json-load", "from": "mcp-server", "to": "json-data", "label": "기동 시 json.load" },
+    { "id": "retrieve", "from": "research-agent", "to": "chroma", "label": "retrieve_docs(query)" },
+    { "id": "embed", "from": "chroma", "to": "titan", "label": "쿼리 임베딩" }
+  ],
+  "cards": [
+    { "dot": "rose", "title": "Supervisor 규칙", "items": ["직접 답을 지어내지 않고 담당 Agent로 확인", "복합 질문은 Agent를 순서대로 호출해 모두 처리", "문서 근거와 데이터를 하나의 보고로 종합"] },
+    { "dot": "violet", "title": "MCP 경로 (4일차)", "items": ["MultiServerMCPClient가 sys.executable로 서버를 직접 기동", "서버를 미리 띄워 둘 필요 없음", "도구: search_employee, list_team_members, get_asset, list_projects"] },
+    { "dot": "cyan", "title": "RAG 경로 (2일차)", "items": ["day6_checkpoint/chroma_db의 sds_policies 컬렉션", "검색 결과마다 [출처: source] 표기", "모든 Agent와 Supervisor는 같은 Sonnet 4.5 모델"] },
+    { "dot": "amber", "title": "시나리오 질문", "items": ["출장 규정의 식비·숙박비 근거 → research_agent", "물류플랫폼팀 인원수·프로젝트 → data_agent", "다음 분기 출장 예산 검토 보고로 종합"] }
+  ]
+}

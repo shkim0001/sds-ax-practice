@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "413f6333-e100-4fa0-b02c-58375527a3ea",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\architecture-final-scenario-20261109-145117\\candidate.json",
+  "output": "C:\\Users\\Admin\\Desktop\\sds-ax-practice\\.archify\\architecture-final-scenario-20261109-145117\\final-scenario.html",
+  "specification": {
+    "sha256": "29ab3df7778d8045944ef2a5c53d2769ab7bd76812b30ac089d532cb894dc7b6",
+    "bytes": 3893
+  },
+  "artifact": {
+    "sha256": "7762cd2b0e16c4ac770fcb16338e14c4ef6988be867919fec20f16a757ebc70c",
+    "bytes": 852360
+  }
+}
